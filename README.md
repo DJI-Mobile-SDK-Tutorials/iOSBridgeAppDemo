@@ -41,7 +41,7 @@ Now try to open the bridge app, and connect your mobile device to the remote con
    
 ## Download and Import the SDK
 
-You can download the iOS SDK 3.0 Beta from here: <https://github.com/dji-dev/DJI-Mobile-SDK-Beta>
+You can download the iOS SDK from here: <http://developer.dji.com/en/mobile-sdk/downloads/>
 
 If you are not familiar with importing the SDK to your Xcode project, please check this tutorial on Github: [Creating a Camera Application](https://github.com/DJI-Mobile-SDK/iOS-FPVDemo)
 
