@@ -104,13 +104,16 @@ Add a UIView inside the View Controller and set it as an IBOutlet called "**fpvP
         DJIAircraft* aircraft = (DJIAircraft*)newProduct;
         self.camera = aircraft.camera;
         self.camera.delegate = self;
-        [self.camera startCameraStateUpdates];
+    }else if ([newProduct isKindOfClass:[DJIHandheld class]]){
+        DJIHandheld* handheld = (DJIHandheld*)newProduct;
+        self.camera = handheld.camera;
+        self.camera.delegate = self;
     }
 }
 
 ~~~
 
- The delegate method above is called when SDK detect a product. Here we create a **DJIAircraft** instance variable and initialize the DJICamera property variable from it. Then we set the camera variable's delegate to self and call its `-(void) startCameraStateUpdates;` method to update camera state.
+ The delegate method above is called when SDK detect a product. Here we create a **DJIAircraft** instance variable and initialize the DJICamera property variable from it. Similiarly, create a **DJIHandheld** instance variable when the `newProduct` is kind of **DJIHandheld** class. Then initialize the DJICamera property variable from it to support handheld device.
   
  Moreover, in the viewWillAppear method, set "fpvPreviewView" instance as a View of VideoPreviewer to show the Video Stream and reset it to nil in the viewWillDisappear method:
  
@@ -133,15 +136,15 @@ Add a UIView inside the View Controller and set it as an IBOutlet called "**fpvP
 ~~~objc
 #pragma mark - DJICameraDelegate
 
--(void) camera:(DJICamera*)camera didReceivedVideoData:(uint8_t*)videoBuffer length:(size_t)length
+-(void)camera:(DJICamera *)camera didReceiveVideoData:(uint8_t *)videoBuffer length:(size_t)size
 {
-    uint8_t* pBuffer = (uint8_t*)malloc(length);
-    memcpy(pBuffer, videoBuffer, length);
-    [[VideoPreviewer instance].dataQueue push:pBuffer length:(int)length];
+    uint8_t* pBuffer = (uint8_t*)malloc(size);
+    memcpy(pBuffer, videoBuffer, size);
+    [[VideoPreviewer instance].dataQueue push:pBuffer length:(int)size];
 }
 ~~~
 
-  `-(void) camera:(DJICamera*)camera didReceivedVideoData:(uint8_t*)videoBuffer length:(size_t)length` method is used to send the video stream to **VideoPreviewer** to decode.
+  `-(void)camera:(DJICamera *)camera didReceiveVideoData:(uint8_t *)videoBuffer length:(size_t)size` method is used to send the video stream to **VideoPreviewer** to decode.
  
 ## Enter Debug Mode
 
