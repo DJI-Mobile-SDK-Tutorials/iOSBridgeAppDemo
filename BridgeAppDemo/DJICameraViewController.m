@@ -8,7 +8,7 @@
 
 #import "DJICameraViewController.h"
 #import <DJISDK/DJISDK.h>
-#import "VideoPreviewer.h"
+#import <VideoPreviewer/VideoPreviewer.h>
 
 #define ENABLE_DEBUG_MODE 1
 

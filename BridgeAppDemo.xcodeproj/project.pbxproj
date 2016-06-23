@@ -7,15 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4E8229C1C3D0EBC0095BA20 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E822931C3D0EBC0095BA20 /* libavcodec.a */; };
-		A4E8229D1C3D0EBC0095BA20 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E822941C3D0EBC0095BA20 /* libavdevice.a */; };
-		A4E8229E1C3D0EBC0095BA20 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E822951C3D0EBC0095BA20 /* libavfilter.a */; };
-		A4E8229F1C3D0EBC0095BA20 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E822961C3D0EBC0095BA20 /* libavformat.a */; };
-		A4E822A01C3D0EBC0095BA20 /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E822971C3D0EBC0095BA20 /* libavresample.a */; };
-		A4E822A11C3D0EBC0095BA20 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E822981C3D0EBC0095BA20 /* libavutil.a */; };
-		A4E822A21C3D0EBC0095BA20 /* libpostproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E822991C3D0EBC0095BA20 /* libpostproc.a */; };
-		A4E822A31C3D0EBC0095BA20 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E8229A1C3D0EBC0095BA20 /* libswresample.a */; };
-		A4E822A41C3D0EBC0095BA20 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E8229B1C3D0EBC0095BA20 /* libswscale.a */; };
+		A4B95E471D1BD3780091A26B /* DJISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D920FF1D1BD1E700E74ED4 /* DJISDK.framework */; };
+		A4B95E491D1BD3870091A26B /* VideoPreviewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D921061D1BD1F000E74ED4 /* VideoPreviewer.framework */; };
+		A4B95E4A1D1BD3870091A26B /* VideoPreviewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4D921061D1BD1F000E74ED4 /* VideoPreviewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4D921081D1BD20400E74ED4 /* DJISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4D920FF1D1BD1E700E74ED4 /* DJISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4F47F1C1C086E5C007A0E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F1B1C086E5C007A0E04 /* main.m */; };
 		A4F47F1F1C086E5C007A0E04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F1E1C086E5C007A0E04 /* AppDelegate.m */; };
 		A4F47F251C086E5C007A0E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F47F231C086E5C007A0E04 /* Main.storyboard */; };
@@ -23,19 +18,23 @@
 		A4F47F2A1C086E5C007A0E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F47F281C086E5C007A0E04 /* LaunchScreen.storyboard */; };
 		A4F47F351C086E5C007A0E04 /* BridgeAppDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F341C086E5C007A0E04 /* BridgeAppDemoTests.m */; };
 		A4F47F421C086EDF007A0E04 /* DJICameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F411C086EDF007A0E04 /* DJICameraViewController.m */; };
-		A4F47F441C086EED007A0E04 /* DJISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F47F431C086EED007A0E04 /* DJISDK.framework */; };
-		A4F47FAE1C086FCD007A0E04 /* DJILinkQueues.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F481C086FCD007A0E04 /* DJILinkQueues.m */; };
-		A4F47FB81C086FCD007A0E04 /* MovieGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47FA91C086FCD007A0E04 /* MovieGLView.m */; };
-		A4F47FB91C086FCD007A0E04 /* VideoFrameExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47FAB1C086FCD007A0E04 /* VideoFrameExtractor.m */; };
-		A4F47FBA1C086FCD007A0E04 /* VideoPreviewer.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47FAD1C086FCD007A0E04 /* VideoPreviewer.m */; };
-		A4F47FBD1C08702F007A0E04 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F47FBB1C087005007A0E04 /* libstdc++.6.0.9.tbd */; };
-		A4F47FBF1C087037007A0E04 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F47FBE1C087037007A0E04 /* libz.tbd */; };
-		A4F47FC11C0870A0007A0E04 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F47FC01C0870A0007A0E04 /* libiconv.tbd */; };
-		A4F47FC21C087112007A0E04 /* DJISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F47F431C086EED007A0E04 /* DJISDK.framework */; };
-		A4F47FC31C087112007A0E04 /* DJISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4F47F431C086EED007A0E04 /* DJISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A4B95E4B1D1BD3870091A26B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4D921011D1BD1F000E74ED4 /* VideoPreviewer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 02A543FC1C3C51CB0083C11B;
+			remoteInfo = VideoPreviewer;
+		};
+		A4D921051D1BD1F000E74ED4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4D921011D1BD1F000E74ED4 /* VideoPreviewer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 02A543FD1C3C51CB0083C11B;
+			remoteInfo = VideoPreviewer;
+		};
 		A4F47F311C086E5C007A0E04 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A4F47F0F1C086E5C007A0E04 /* Project object */;
@@ -52,7 +51,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A4F47FC31C087112007A0E04 /* DJISDK.framework in Embed Frameworks */,
+				A4B95E4A1D1BD3870091A26B /* VideoPreviewer.framework in Embed Frameworks */,
+				A4D921081D1BD20400E74ED4 /* DJISDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +60,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A4D920FF1D1BD1E700E74ED4 /* DJISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DJISDK.framework; path = BridgeAppDemo/Frameworks/DJISDK.framework; sourceTree = "<group>"; };
+		A4D921011D1BD1F000E74ED4 /* VideoPreviewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VideoPreviewer.xcodeproj; path = BridgeAppDemo/Frameworks/VideoPreviewer/VideoPreviewer.xcodeproj; sourceTree = "<group>"; };
 		A4E8222E1C3D0EBC0095BA20 /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avcodec.h; sourceTree = "<group>"; };
 		A4E8222F1C3D0EBC0095BA20 /* avfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfft.h; sourceTree = "<group>"; };
 		A4E822301C3D0EBC0095BA20 /* dv_profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dv_profile.h; sourceTree = "<group>"; };
@@ -174,7 +176,6 @@
 		A4F47F361C086E5C007A0E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4F47F401C086EDF007A0E04 /* DJICameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJICameraViewController.h; sourceTree = "<group>"; };
 		A4F47F411C086EDF007A0E04 /* DJICameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJICameraViewController.m; sourceTree = "<group>"; };
-		A4F47F431C086EED007A0E04 /* DJISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DJISDK.framework; path = BridgeAppDemo/DJISDK.framework; sourceTree = "<group>"; };
 		A4F47F471C086FCD007A0E04 /* DJILinkQueues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJILinkQueues.h; sourceTree = "<group>"; };
 		A4F47F481C086FCD007A0E04 /* DJILinkQueues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJILinkQueues.m; sourceTree = "<group>"; };
 		A4F47FA81C086FCD007A0E04 /* MovieGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieGLView.h; sourceTree = "<group>"; };
@@ -183,9 +184,6 @@
 		A4F47FAB1C086FCD007A0E04 /* VideoFrameExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoFrameExtractor.m; sourceTree = "<group>"; };
 		A4F47FAC1C086FCD007A0E04 /* VideoPreviewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPreviewer.h; sourceTree = "<group>"; };
 		A4F47FAD1C086FCD007A0E04 /* VideoPreviewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPreviewer.m; sourceTree = "<group>"; };
-		A4F47FBB1C087005007A0E04 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
-		A4F47FBE1C087037007A0E04 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		A4F47FC01C0870A0007A0E04 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,20 +191,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4E822A31C3D0EBC0095BA20 /* libswresample.a in Frameworks */,
-				A4E8229E1C3D0EBC0095BA20 /* libavfilter.a in Frameworks */,
-				A4E822A21C3D0EBC0095BA20 /* libpostproc.a in Frameworks */,
-				A4E8229D1C3D0EBC0095BA20 /* libavdevice.a in Frameworks */,
-				A4F47FC11C0870A0007A0E04 /* libiconv.tbd in Frameworks */,
-				A4F47FBF1C087037007A0E04 /* libz.tbd in Frameworks */,
-				A4E822A11C3D0EBC0095BA20 /* libavutil.a in Frameworks */,
-				A4F47FBD1C08702F007A0E04 /* libstdc++.6.0.9.tbd in Frameworks */,
-				A4E822A41C3D0EBC0095BA20 /* libswscale.a in Frameworks */,
-				A4F47FC21C087112007A0E04 /* DJISDK.framework in Frameworks */,
-				A4E8229F1C3D0EBC0095BA20 /* libavformat.a in Frameworks */,
-				A4F47F441C086EED007A0E04 /* DJISDK.framework in Frameworks */,
-				A4E8229C1C3D0EBC0095BA20 /* libavcodec.a in Frameworks */,
-				A4E822A01C3D0EBC0095BA20 /* libavresample.a in Frameworks */,
+				A4B95E471D1BD3780091A26B /* DJISDK.framework in Frameworks */,
+				A4B95E491D1BD3870091A26B /* VideoPreviewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +206,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4D921021D1BD1F000E74ED4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4D921061D1BD1F000E74ED4 /* VideoPreviewer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A4E8222B1C3D0EBC0095BA20 /* ffmpeg */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,10 +466,8 @@
 		A4F47F3F1C086E6F007A0E04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A4F47F431C086EED007A0E04 /* DJISDK.framework */,
-				A4F47FC01C0870A0007A0E04 /* libiconv.tbd */,
-				A4F47FBE1C087037007A0E04 /* libz.tbd */,
-				A4F47FBB1C087005007A0E04 /* libstdc++.6.0.9.tbd */,
+				A4D920FF1D1BD1E700E74ED4 /* DJISDK.framework */,
+				A4D921011D1BD1F000E74ED4 /* VideoPreviewer.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -519,6 +511,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A4B95E4C1D1BD3870091A26B /* PBXTargetDependency */,
 			);
 			name = BridgeAppDemo;
 			productName = BridgeAppDemo;
@@ -572,6 +565,12 @@
 			mainGroup = A4F47F0E1C086E5C007A0E04;
 			productRefGroup = A4F47F181C086E5C007A0E04 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A4D921021D1BD1F000E74ED4 /* Products */;
+					ProjectRef = A4D921011D1BD1F000E74ED4 /* VideoPreviewer.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A4F47F161C086E5C007A0E04 /* BridgeAppDemo */,
@@ -579,6 +578,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A4D921061D1BD1F000E74ED4 /* VideoPreviewer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VideoPreviewer.framework;
+			remoteRef = A4D921051D1BD1F000E74ED4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A4F47F151C086E5C007A0E04 /* Resources */ = {
@@ -605,13 +614,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4F47FB91C086FCD007A0E04 /* VideoFrameExtractor.m in Sources */,
-				A4F47FB81C086FCD007A0E04 /* MovieGLView.m in Sources */,
 				A4F47F1F1C086E5C007A0E04 /* AppDelegate.m in Sources */,
 				A4F47F1C1C086E5C007A0E04 /* main.m in Sources */,
 				A4F47F421C086EDF007A0E04 /* DJICameraViewController.m in Sources */,
-				A4F47FAE1C086FCD007A0E04 /* DJILinkQueues.m in Sources */,
-				A4F47FBA1C086FCD007A0E04 /* VideoPreviewer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +631,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A4B95E4C1D1BD3870091A26B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VideoPreviewer;
+			targetProxy = A4B95E4B1D1BD3870091A26B /* PBXContainerItemProxy */;
+		};
 		A4F47F321C086E5C007A0E04 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A4F47F161C086E5C007A0E04 /* BridgeAppDemo */;
@@ -739,17 +749,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BridgeAppDemo",
+					"$(PROJECT_DIR)/BridgeAppDemo/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BridgeAppDemo/VideoPreviewer/ffmpeg/include\"";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = BridgeAppDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/BridgeAppDemo/VideoPreviewer/ffmpeg/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dji.BridgeAppDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -759,17 +771,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BridgeAppDemo",
+					"$(PROJECT_DIR)/BridgeAppDemo/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BridgeAppDemo/VideoPreviewer/ffmpeg/include\"";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = BridgeAppDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/BridgeAppDemo/VideoPreviewer/ffmpeg/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dji.BridgeAppDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
