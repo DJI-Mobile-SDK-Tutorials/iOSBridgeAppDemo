@@ -1,3 +1,5 @@
+#### This tutorial is now deprecated, please refer to <https://developer.dji.com/mobile-sdk/documentation/ios-tutorials/BridgeAppDemo.html> in DJI Developer Website.
+
 # DJI Bridge App Tutorial
 
 <!-- toc -->
