@@ -69,7 +69,7 @@
 
 - (void)registerApp
 {
-    NSString *appKey = @"Enter Your App Key Here";
+    NSString *appKey = @"Please enter your App Key here.";
     [DJISDKManager registerApp:appKey withDelegate:self];
 }
 
@@ -122,11 +122,9 @@
 
 #pragma mark - DJICameraDelegate
 
--(void)camera:(DJICamera *)camera didReceiveVideoData:(uint8_t *)videoBuffer length:(size_t)size
+- (void)camera:(DJICamera *)camera didReceiveVideoData:(uint8_t *)videoBuffer length:(size_t)size
 {
-    uint8_t* pBuffer = (uint8_t*)malloc(size);
-    memcpy(pBuffer, videoBuffer, size);
-    [[VideoPreviewer instance].dataQueue push:pBuffer length:(int)size];
+    [[VideoPreviewer instance] push:videoBuffer length:(int)size];
 }
 
 -(void) camera:(DJICamera*)camera didUpdateSystemState:(DJICameraSystemState*)systemState

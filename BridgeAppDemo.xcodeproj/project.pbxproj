@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4B95E471D1BD3780091A26B /* DJISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D920FF1D1BD1E700E74ED4 /* DJISDK.framework */; };
-		A4B95E491D1BD3870091A26B /* VideoPreviewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D921061D1BD1F000E74ED4 /* VideoPreviewer.framework */; };
-		A4B95E4A1D1BD3870091A26B /* VideoPreviewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4D921061D1BD1F000E74ED4 /* VideoPreviewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A4D921081D1BD20400E74ED4 /* DJISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4D920FF1D1BD1E700E74ED4 /* DJISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A412558C1DCAFB8E002DF91B /* VideoPreviewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A412558B1DCAFB61002DF91B /* VideoPreviewer.framework */; };
+		A412558D1DCAFB8E002DF91B /* VideoPreviewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A412558B1DCAFB61002DF91B /* VideoPreviewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4F47F1C1C086E5C007A0E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F1B1C086E5C007A0E04 /* main.m */; };
 		A4F47F1F1C086E5C007A0E04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F1E1C086E5C007A0E04 /* AppDelegate.m */; };
 		A4F47F251C086E5C007A0E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F47F231C086E5C007A0E04 /* Main.storyboard */; };
@@ -18,21 +16,22 @@
 		A4F47F2A1C086E5C007A0E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F47F281C086E5C007A0E04 /* LaunchScreen.storyboard */; };
 		A4F47F351C086E5C007A0E04 /* BridgeAppDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F341C086E5C007A0E04 /* BridgeAppDemoTests.m */; };
 		A4F47F421C086EDF007A0E04 /* DJICameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F411C086EDF007A0E04 /* DJICameraViewController.m */; };
+		F93FB4F27B353CBE49C5F7C7 /* libPods-BridgeAppDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCB0D65613A0B536708D254 /* libPods-BridgeAppDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A4B95E4B1D1BD3870091A26B /* PBXContainerItemProxy */ = {
+		A412558A1DCAFB61002DF91B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A4D921011D1BD1F000E74ED4 /* VideoPreviewer.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 02A543FC1C3C51CB0083C11B;
-			remoteInfo = VideoPreviewer;
-		};
-		A4D921051D1BD1F000E74ED4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A4D921011D1BD1F000E74ED4 /* VideoPreviewer.xcodeproj */;
+			containerPortal = A41255861DCAFB61002DF91B /* VideoPreviewer.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 02A543FD1C3C51CB0083C11B;
+			remoteInfo = VideoPreviewer;
+		};
+		A412558E1DCAFB8E002DF91B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A41255861DCAFB61002DF91B /* VideoPreviewer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 02A543FC1C3C51CB0083C11B;
 			remoteInfo = VideoPreviewer;
 		};
 		A4F47F311C086E5C007A0E04 /* PBXContainerItemProxy */ = {
@@ -51,8 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A4B95E4A1D1BD3870091A26B /* VideoPreviewer.framework in Embed Frameworks */,
-				A4D921081D1BD20400E74ED4 /* DJISDK.framework in Embed Frameworks */,
+				A412558D1DCAFB8E002DF91B /* VideoPreviewer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,8 +58,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A4D920FF1D1BD1E700E74ED4 /* DJISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DJISDK.framework; path = BridgeAppDemo/Frameworks/DJISDK.framework; sourceTree = "<group>"; };
-		A4D921011D1BD1F000E74ED4 /* VideoPreviewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VideoPreviewer.xcodeproj; path = BridgeAppDemo/Frameworks/VideoPreviewer/VideoPreviewer.xcodeproj; sourceTree = "<group>"; };
+		A41255861DCAFB61002DF91B /* VideoPreviewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VideoPreviewer.xcodeproj; path = VideoPreviewer/VideoPreviewer.xcodeproj; sourceTree = "<group>"; };
+		A41255921DCB0CE7002DF91B /* BridgeAppDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BridgeAppDemo.entitlements; sourceTree = "<group>"; };
 		A4E8222E1C3D0EBC0095BA20 /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avcodec.h; sourceTree = "<group>"; };
 		A4E8222F1C3D0EBC0095BA20 /* avfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfft.h; sourceTree = "<group>"; };
 		A4E822301C3D0EBC0095BA20 /* dv_profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dv_profile.h; sourceTree = "<group>"; };
@@ -184,6 +182,9 @@
 		A4F47FAB1C086FCD007A0E04 /* VideoFrameExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoFrameExtractor.m; sourceTree = "<group>"; };
 		A4F47FAC1C086FCD007A0E04 /* VideoPreviewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPreviewer.h; sourceTree = "<group>"; };
 		A4F47FAD1C086FCD007A0E04 /* VideoPreviewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPreviewer.m; sourceTree = "<group>"; };
+		CC488E0687F24BD135281767 /* Pods-BridgeAppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgeAppDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BridgeAppDemo/Pods-BridgeAppDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		DDCB0D65613A0B536708D254 /* libPods-BridgeAppDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BridgeAppDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F259797BAD9DD169134827D3 /* Pods-BridgeAppDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgeAppDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BridgeAppDemo/Pods-BridgeAppDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,8 +192,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4B95E471D1BD3780091A26B /* DJISDK.framework in Frameworks */,
-				A4B95E491D1BD3870091A26B /* VideoPreviewer.framework in Frameworks */,
+				A412558C1DCAFB8E002DF91B /* VideoPreviewer.framework in Frameworks */,
+				F93FB4F27B353CBE49C5F7C7 /* libPods-BridgeAppDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,10 +207,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A4D921021D1BD1F000E74ED4 /* Products */ = {
+		344A20B101EFFACC515770D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A4D921061D1BD1F000E74ED4 /* VideoPreviewer.framework */,
+				CC488E0687F24BD135281767 /* Pods-BridgeAppDemo.debug.xcconfig */,
+				F259797BAD9DD169134827D3 /* Pods-BridgeAppDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A41255871DCAFB61002DF91B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A412558B1DCAFB61002DF91B /* VideoPreviewer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -417,6 +427,7 @@
 				A4F47F3F1C086E6F007A0E04 /* Frameworks */,
 				A4F47F331C086E5C007A0E04 /* BridgeAppDemoTests */,
 				A4F47F181C086E5C007A0E04 /* Products */,
+				344A20B101EFFACC515770D1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -432,6 +443,7 @@
 		A4F47F191C086E5C007A0E04 /* BridgeAppDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A41255921DCB0CE7002DF91B /* BridgeAppDemo.entitlements */,
 				A4F47F1D1C086E5C007A0E04 /* AppDelegate.h */,
 				A4F47F1E1C086E5C007A0E04 /* AppDelegate.m */,
 				A4F47F401C086EDF007A0E04 /* DJICameraViewController.h */,
@@ -466,8 +478,8 @@
 		A4F47F3F1C086E6F007A0E04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A4D920FF1D1BD1E700E74ED4 /* DJISDK.framework */,
-				A4D921011D1BD1F000E74ED4 /* VideoPreviewer.xcodeproj */,
+				A41255861DCAFB61002DF91B /* VideoPreviewer.xcodeproj */,
+				DDCB0D65613A0B536708D254 /* libPods-BridgeAppDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -503,15 +515,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4F47F391C086E5C007A0E04 /* Build configuration list for PBXNativeTarget "BridgeAppDemo" */;
 			buildPhases = (
+				778946488BB0C034E5B689FD /* [CP] Check Pods Manifest.lock */,
 				A4F47F131C086E5C007A0E04 /* Sources */,
 				A4F47F141C086E5C007A0E04 /* Frameworks */,
 				A4F47F151C086E5C007A0E04 /* Resources */,
 				A4F47FC41C087112007A0E04 /* Embed Frameworks */,
+				FC3CA2154A5440710746C3A8 /* [CP] Embed Pods Frameworks */,
+				9E7AFD62923A2A531D849A29 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A4B95E4C1D1BD3870091A26B /* PBXTargetDependency */,
+				A412558F1DCAFB8E002DF91B /* PBXTargetDependency */,
 			);
 			name = BridgeAppDemo;
 			productName = BridgeAppDemo;
@@ -547,6 +562,11 @@
 				TargetAttributes = {
 					A4F47F161C086E5C007A0E04 = {
 						CreatedOnToolsVersion = 7.1;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+						};
 					};
 					A4F47F2F1C086E5C007A0E04 = {
 						CreatedOnToolsVersion = 7.1;
@@ -567,8 +587,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = A4D921021D1BD1F000E74ED4 /* Products */;
-					ProjectRef = A4D921011D1BD1F000E74ED4 /* VideoPreviewer.xcodeproj */;
+					ProductGroup = A41255871DCAFB61002DF91B /* Products */;
+					ProjectRef = A41255861DCAFB61002DF91B /* VideoPreviewer.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -580,11 +600,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A4D921061D1BD1F000E74ED4 /* VideoPreviewer.framework */ = {
+		A412558B1DCAFB61002DF91B /* VideoPreviewer.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VideoPreviewer.framework;
-			remoteRef = A4D921051D1BD1F000E74ED4 /* PBXContainerItemProxy */;
+			remoteRef = A412558A1DCAFB61002DF91B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -609,6 +629,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		778946488BB0C034E5B689FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E7AFD62923A2A531D849A29 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BridgeAppDemo/Pods-BridgeAppDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC3CA2154A5440710746C3A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BridgeAppDemo/Pods-BridgeAppDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A4F47F131C086E5C007A0E04 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -631,10 +699,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A4B95E4C1D1BD3870091A26B /* PBXTargetDependency */ = {
+		A412558F1DCAFB8E002DF91B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VideoPreviewer;
-			targetProxy = A4B95E4B1D1BD3870091A26B /* PBXContainerItemProxy */;
+			targetProxy = A412558E1DCAFB8E002DF91B /* PBXContainerItemProxy */;
 		};
 		A4F47F321C086E5C007A0E04 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -747,13 +815,15 @@
 		};
 		A4F47F3A1C086E5C007A0E04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC488E0687F24BD135281767 /* Pods-BridgeAppDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BridgeAppDemo/BridgeAppDemo.entitlements;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BridgeAppDemo",
-					"$(PROJECT_DIR)/BridgeAppDemo/Frameworks",
+					"$(PROJECT_DIR)/../VideoPreviewer",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -769,13 +839,15 @@
 		};
 		A4F47F3B1C086E5C007A0E04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F259797BAD9DD169134827D3 /* Pods-BridgeAppDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BridgeAppDemo/BridgeAppDemo.entitlements;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/BridgeAppDemo",
-					"$(PROJECT_DIR)/BridgeAppDemo/Frameworks",
+					"$(PROJECT_DIR)/../VideoPreviewer",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
