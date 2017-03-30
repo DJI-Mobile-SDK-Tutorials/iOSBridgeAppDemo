@@ -1,5 +1,7 @@
 # iOS-DJIBridgeAppDemo
 
+> **Note: This Sample Project is developed based on iOS SDK v3.5.1, an update version for iOS SDK v4.0 will be published soon.**
+
 ## Introduction
 
 This DJIBridgeAppDemo is designed for you to gain a better understanding of the DJI Bridge App. It will teach you how to use it for app debugging by implementing the live video view and two basic camera functionalities: "Take Photo" and "Record video".
