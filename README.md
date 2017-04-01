@@ -1,14 +1,14 @@
-# iOS-DJIBridgeAppDemo
+# iOS-BridgeAppDemo
 
 ## Introduction
 
-This DJIBridgeAppDemo is designed for you to gain a better understanding of the DJI Bridge App. It will teach you how to use it for app debugging by implementing the live video view and two basic camera functionalities: "Take Photo" and "Record video".
+This iOSBridgeAppDemo is designed for you to gain a better understanding of the DJI Bridge App. It will teach you how to use it for app debugging by implementing the live video view and two basic camera functionalities: "Take Photo" and "Record video".
 
 ## Requirements
 
  - iOS 9.0+
  - Xcode 8.0+
- - DJI iOS SDK 3.5.1
+ - DJI iOS SDK 4.0
 
 ## SDK Installation with CocoaPods
 
@@ -37,7 +37,7 @@ If you install it successfully, you should get the messages similar to the follo
 ~~~
 Analyzing dependencies
 Downloading dependencies
-Installing DJI-SDK-iOS (3.5.1)
+Installing DJI-SDK-iOS (4.0)
 Generating Pods project
 Integrating client project
 
@@ -55,7 +55,7 @@ installed.
 
 ## Tutorial
 
-For this demo's tutorial: **DJI Bridge App Tutorial**, please refer to <https://developer.dji.com/mobile-sdk/documentation/ios-tutorials/BridgeAppDemo.html>.
+For this demo's tutorial: **iOS Bridge App Tutorial**, please refer to <https://developer.dji.com/mobile-sdk/documentation/ios-tutorials/BridgeAppDemo.html>.
 
 ## Feedback
 
@@ -70,5 +70,5 @@ Please use **Github Issue** or **email** [oliver.ou@dji.com](oliver.ou@dji.com) 
 
 ## License
 
-DJIBridgeAppDemo is available under the MIT license. Please see the LICENSE file for more info.
+iOSBridgeAppDemo is available under the MIT license. Please see the LICENSE file for more info.
 

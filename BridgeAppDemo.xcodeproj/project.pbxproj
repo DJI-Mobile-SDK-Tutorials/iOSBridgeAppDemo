@@ -14,7 +14,6 @@
 		A4F47F251C086E5C007A0E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F47F231C086E5C007A0E04 /* Main.storyboard */; };
 		A4F47F271C086E5C007A0E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4F47F261C086E5C007A0E04 /* Assets.xcassets */; };
 		A4F47F2A1C086E5C007A0E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F47F281C086E5C007A0E04 /* LaunchScreen.storyboard */; };
-		A4F47F351C086E5C007A0E04 /* BridgeAppDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F341C086E5C007A0E04 /* BridgeAppDemoTests.m */; };
 		A4F47F421C086EDF007A0E04 /* DJICameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F411C086EDF007A0E04 /* DJICameraViewController.m */; };
 		F93FB4F27B353CBE49C5F7C7 /* libPods-BridgeAppDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCB0D65613A0B536708D254 /* libPods-BridgeAppDemo.a */; };
 /* End PBXBuildFile section */
@@ -33,13 +32,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 02A543FC1C3C51CB0083C11B;
 			remoteInfo = VideoPreviewer;
-		};
-		A4F47F311C086E5C007A0E04 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A4F47F0F1C086E5C007A0E04 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A4F47F161C086E5C007A0E04;
-			remoteInfo = BridgeAppDemo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -169,7 +161,6 @@
 		A4F47F261C086E5C007A0E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4F47F291C086E5C007A0E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4F47F2B1C086E5C007A0E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4F47F301C086E5C007A0E04 /* BridgeAppDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BridgeAppDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F47F341C086E5C007A0E04 /* BridgeAppDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeAppDemoTests.m; sourceTree = "<group>"; };
 		A4F47F361C086E5C007A0E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4F47F401C086EDF007A0E04 /* DJICameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJICameraViewController.h; sourceTree = "<group>"; };
@@ -194,13 +185,6 @@
 			files = (
 				A412558C1DCAFB8E002DF91B /* VideoPreviewer.framework in Frameworks */,
 				F93FB4F27B353CBE49C5F7C7 /* libPods-BridgeAppDemo.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A4F47F2D1C086E5C007A0E04 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +419,6 @@
 			isa = PBXGroup;
 			children = (
 				A4F47F171C086E5C007A0E04 /* BridgeAppDemo.app */,
-				A4F47F301C086E5C007A0E04 /* BridgeAppDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -533,24 +516,6 @@
 			productReference = A4F47F171C086E5C007A0E04 /* BridgeAppDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A4F47F2F1C086E5C007A0E04 /* BridgeAppDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A4F47F3C1C086E5C007A0E04 /* Build configuration list for PBXNativeTarget "BridgeAppDemoTests" */;
-			buildPhases = (
-				A4F47F2C1C086E5C007A0E04 /* Sources */,
-				A4F47F2D1C086E5C007A0E04 /* Frameworks */,
-				A4F47F2E1C086E5C007A0E04 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A4F47F321C086E5C007A0E04 /* PBXTargetDependency */,
-			);
-			name = BridgeAppDemoTests;
-			productName = BridgeAppDemoTests;
-			productReference = A4F47F301C086E5C007A0E04 /* BridgeAppDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -567,10 +532,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					A4F47F2F1C086E5C007A0E04 = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = A4F47F161C086E5C007A0E04;
 					};
 				};
 			};
@@ -594,7 +555,6 @@
 			projectRoot = "";
 			targets = (
 				A4F47F161C086E5C007A0E04 /* BridgeAppDemo */,
-				A4F47F2F1C086E5C007A0E04 /* BridgeAppDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -620,13 +580,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A4F47F2E1C086E5C007A0E04 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -642,7 +595,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9E7AFD62923A2A531D849A29 /* [CP] Copy Pods Resources */ = {
@@ -688,14 +641,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A4F47F2C1C086E5C007A0E04 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A4F47F351C086E5C007A0E04 /* BridgeAppDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -703,11 +648,6 @@
 			isa = PBXTargetDependency;
 			name = VideoPreviewer;
 			targetProxy = A412558E1DCAFB8E002DF91B /* PBXContainerItemProxy */;
-		};
-		A4F47F321C086E5C007A0E04 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A4F47F161C086E5C007A0E04 /* BridgeAppDemo */;
-			targetProxy = A4F47F311C086E5C007A0E04 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -861,30 +801,6 @@
 			};
 			name = Release;
 		};
-		A4F47F3D1C086E5C007A0E04 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = BridgeAppDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dji.BridgeAppDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BridgeAppDemo.app/BridgeAppDemo";
-			};
-			name = Debug;
-		};
-		A4F47F3E1C086E5C007A0E04 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = BridgeAppDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dji.BridgeAppDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BridgeAppDemo.app/BridgeAppDemo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -902,15 +818,6 @@
 			buildConfigurations = (
 				A4F47F3A1C086E5C007A0E04 /* Debug */,
 				A4F47F3B1C086E5C007A0E04 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A4F47F3C1C086E5C007A0E04 /* Build configuration list for PBXNativeTarget "BridgeAppDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A4F47F3D1C086E5C007A0E04 /* Debug */,
-				A4F47F3E1C086E5C007A0E04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

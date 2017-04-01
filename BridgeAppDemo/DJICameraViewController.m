@@ -10,9 +10,11 @@
 #import <DJISDK/DJISDK.h>
 #import <VideoPreviewer/VideoPreviewer.h>
 
+#define WeakRef(__obj) __weak typeof(self) __obj = self
+#define WeakReturn(__obj) if(__obj ==nil)return;
 #define ENABLE_DEBUG_MODE 1
 
-@interface DJICameraViewController ()<DJICameraDelegate, DJISDKManagerDelegate>
+@interface DJICameraViewController ()<DJICameraDelegate, DJISDKManagerDelegate, DJIBaseProductDelegate, DJIVideoFeedListener>
 
 @property (nonatomic, strong) DJICamera* camera;
 @property (weak, nonatomic) IBOutlet UIButton *recordBtn;
@@ -29,15 +31,11 @@
 
 @implementation DJICameraViewController
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [[VideoPreviewer instance] setView:self.fpvPreviewView];
-}
-
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    [[VideoPreviewer instance] setView:self.fpvPreviewView];
     [self registerApp];
 }
 
@@ -45,6 +43,7 @@
 {
     [super viewWillDisappear:animated];
     [[VideoPreviewer instance] setView:nil];
+    [[DJISDKManager videoFeeder].primaryVideoFeed removeListener:self];
 }
 
 - (void)viewDidLoad {
@@ -69,11 +68,11 @@
 
 - (void)registerApp
 {
-    NSString *appKey = @"Please enter your App Key here.";
-    [DJISDKManager registerApp:appKey withDelegate:self];
+    //Please enter your App key in the "DJISDKAppKey" key in info.plist file.
+    [DJISDKManager registerAppWithDelegate:self];
 }
 
-- (NSString *)formattingSeconds:(int)seconds
+- (NSString *)formattingSeconds:(NSUInteger)seconds
 {
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:seconds];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -84,22 +83,36 @@
     return formattedTimeString;
 }
 
-#pragma mark DJISDKManagerDelegate Method
+- (DJICamera*) fetchCamera {
+    
+    if (![DJISDKManager product]) {
+        return nil;
+    }
+    
+    if ([[DJISDKManager product] isKindOfClass:[DJIAircraft class]]) {
+        return ((DJIAircraft*)[DJISDKManager product]).camera;
+    }else if ([[DJISDKManager product] isKindOfClass:[DJIHandheld class]]){
+        return ((DJIHandheld *)[DJISDKManager product]).camera;
+    }
+    
+    return nil;
+}
 
--(void) sdkManagerProductDidChangeFrom:(DJIBaseProduct* _Nullable) oldProduct to:(DJIBaseProduct* _Nullable) newProduct
+#pragma mark DJIBaseProductDelegate Method
+- (void)productConnected:(DJIBaseProduct *)product
 {
-    if ([newProduct isKindOfClass:[DJIAircraft class]]) {
-        DJIAircraft* aircraft = (DJIAircraft*)newProduct;
-        self.camera = aircraft.camera;
-        self.camera.delegate = self;
-    }else if ([newProduct isKindOfClass:[DJIHandheld class]]){
-        DJIHandheld* handheld = (DJIHandheld*)newProduct;
-        self.camera = handheld.camera;
-        self.camera.delegate = self;
+    if(product){
+        [product setDelegate:self];
+        DJICamera *camera = [self fetchCamera];
+        if (camera != nil) {
+            camera.delegate = self;
+        }
     }
 }
 
-- (void)sdkManagerDidRegisterAppWithError:(NSError *)error
+#pragma mark DJISDKManagerDelegate Method
+
+- (void)appRegisteredWithError:(NSError *)error
 {
     NSString* message = @"Register App Successed!";
     if (error) {
@@ -109,10 +122,11 @@
         NSLog(@"registerAppSuccess");
         
 #if ENABLE_DEBUG_MODE
-        [DJISDKManager enterDebugModeWithDebugId:@"Please type in Debug ID of the DJI Bridge app here"];
+        [DJISDKManager enableBridgeModeWithBridgeAppIP:@"Please type in Debug ID of the DJI Bridge app here"];
 #else
         [DJISDKManager startConnectionToProduct];
 #endif
+        [[DJISDKManager videoFeeder].primaryVideoFeed addListener:self withQueue:nil];
         [[VideoPreviewer instance] start];
         
     }
@@ -120,12 +134,12 @@
     [self showAlertViewWithTitle:@"Register App" withMessage:message];
 }
 
-#pragma mark - DJICameraDelegate
-
-- (void)camera:(DJICamera *)camera didReceiveVideoData:(uint8_t *)videoBuffer length:(size_t)size
-{
-    [[VideoPreviewer instance] push:videoBuffer length:(int)size];
+#pragma mark - DJIVideoFeedListener
+-(void)videoFeed:(DJIVideoFeed *)videoFeed didUpdateVideoData:(NSData *)videoData {
+    [[VideoPreviewer instance] push:(uint8_t *)videoData.bytes length:(int)videoData.length];
 }
+
+#pragma mark - DJICameraDelegate
 
 -(void) camera:(DJICamera*)camera didUpdateSystemState:(DJICameraSystemState*)systemState
 {
@@ -154,33 +168,41 @@
 
 - (IBAction)captureAction:(id)sender {
     
-    __weak DJICameraViewController *weakSelf = self;
-    
-    [self.camera startShootPhoto:DJICameraShootPhotoModeSingle withCompletion:^(NSError * _Nullable error) {
-        if (error) {
-            [weakSelf showAlertViewWithTitle:@"Take Photo Error" withMessage:error.description];
-        }
-    }];
+    __weak DJICamera* camera = [self fetchCamera];
+    if (camera) {
+        WeakRef(target);
+        [camera setShootPhotoMode:DJICameraShootPhotoModeSingle withCompletion:^(NSError * _Nullable error) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [camera startShootPhotoWithCompletion:^(NSError * _Nullable error) {
+                    WeakReturn(target);
+                    if (error) {
+                        [target showAlertViewWithTitle:@"Take Photo Error" withMessage:error.description];
+                    }
+                }];
+            });
+        }];
+    }
     
 }
 
 - (IBAction)recordAction:(id)sender {
     
-    __weak DJICameraViewController *weakSelf = self;
-    
+    WeakRef(target);
     if (self.isRecording) {
         
         [self.camera stopRecordVideoWithCompletion:^(NSError * _Nullable error) {
+            WeakReturn(target);
             if (error) {
-                [weakSelf showAlertViewWithTitle:@"Stop Record Video Error" withMessage:error.description];
+                [target showAlertViewWithTitle:@"Stop Record Video Error" withMessage:error.description];
             }
         }];
         
     }else
     {
         [self.camera startRecordVideoWithCompletion:^(NSError * _Nullable error) {
+            WeakReturn(target);
             if (error) {
-                [weakSelf showAlertViewWithTitle:@"Start Record Video Error" withMessage:error.description];
+                [target showAlertViewWithTitle:@"Start Record Video Error" withMessage:error.description];
             }
         }];
     }
@@ -189,26 +211,30 @@
 
 - (IBAction)changeWorkModeAction:(id)sender {
     
-    __weak DJICameraViewController *weakSelf = self;
     UISegmentedControl *segmentControl = (UISegmentedControl *)sender;
-    if (segmentControl.selectedSegmentIndex == 0) { //Take photo
-        
-        [self.camera setCameraMode:DJICameraModeShootPhoto withCompletion:^(NSError * _Nullable error) {
-            if (error) {
-                [weakSelf showAlertViewWithTitle:@"Set DJICameraModeShootPhoto Failed" withMessage:error.description];
-            }
+    __weak DJICamera* camera = [self fetchCamera];
+    
+    if (camera) {
+        WeakRef(target);
+        if (segmentControl.selectedSegmentIndex == 0) { //Take photo
             
-        }];
-        
-    }else if (segmentControl.selectedSegmentIndex == 1){ //Record video
-        
-        [self.camera setCameraMode:DJICameraModeRecordVideo withCompletion:^(NSError * _Nullable error) {
-            if (error) {
-                [weakSelf showAlertViewWithTitle:@"Set DJICameraModeRecordVideo Failed" withMessage:error.description];
-            }
+            [camera setMode:DJICameraModeShootPhoto withCompletion:^(NSError * _Nullable error) {
+                WeakReturn(target);
+                if (error) {
+                    [target showAlertViewWithTitle:@"Set DJICameraModeShootPhoto Failed" withMessage:error.description];
+                }
+            }];
             
-        }];
-        
+        }else if (segmentControl.selectedSegmentIndex == 1){ //Record video
+            
+            [camera setMode:DJICameraModeRecordVideo withCompletion:^(NSError * _Nullable error) {
+                WeakReturn(target);
+                if (error) {
+                    [target showAlertViewWithTitle:@"Set DJICameraModeRecordVideo Failed" withMessage:error.description];
+                }
+            }];
+            
+        }
     }
     
 }
