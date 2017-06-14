@@ -14,7 +14,7 @@
 #define WeakReturn(__obj) if(__obj ==nil)return;
 #define ENABLE_DEBUG_MODE 1
 
-@interface DJICameraViewController ()<DJICameraDelegate, DJISDKManagerDelegate, DJIBaseProductDelegate, DJIVideoFeedListener>
+@interface DJICameraViewController ()<DJICameraDelegate, DJISDKManagerDelegate, DJIVideoFeedListener>
 
 @property (nonatomic, strong) DJICamera* camera;
 @property (weak, nonatomic) IBOutlet UIButton *recordBtn;
@@ -98,7 +98,7 @@
     return nil;
 }
 
-#pragma mark DJIBaseProductDelegate Method
+#pragma mark DJISDKManagerDelegate Method
 - (void)productConnected:(DJIBaseProduct *)product
 {
     if(product){
@@ -109,8 +109,6 @@
         }
     }
 }
-
-#pragma mark DJISDKManagerDelegate Method
 
 - (void)appRegisteredWithError:(NSError *)error
 {
