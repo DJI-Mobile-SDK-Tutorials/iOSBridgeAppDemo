@@ -102,7 +102,6 @@
 - (void)productConnected:(DJIBaseProduct *)product
 {
     if(product){
-        [product setDelegate:self];
         DJICamera *camera = [self fetchCamera];
         if (camera != nil) {
             camera.delegate = self;
@@ -185,10 +184,11 @@
 
 - (IBAction)recordAction:(id)sender {
     
+    __weak DJICamera* camera = [self fetchCamera];
     WeakRef(target);
     if (self.isRecording) {
         
-        [self.camera stopRecordVideoWithCompletion:^(NSError * _Nullable error) {
+        [camera stopRecordVideoWithCompletion:^(NSError * _Nullable error) {
             WeakReturn(target);
             if (error) {
                 [target showAlertViewWithTitle:@"Stop Record Video Error" withMessage:error.description];
@@ -197,7 +197,7 @@
         
     }else
     {
-        [self.camera startRecordVideoWithCompletion:^(NSError * _Nullable error) {
+        [camera startRecordVideoWithCompletion:^(NSError * _Nullable error) {
             WeakReturn(target);
             if (error) {
                 [target showAlertViewWithTitle:@"Start Record Video Error" withMessage:error.description];
