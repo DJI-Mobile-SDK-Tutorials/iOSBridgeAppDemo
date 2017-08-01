@@ -107,6 +107,14 @@
             camera.delegate = self;
         }
     }
+    
+    //If this demo is used in China, it's required to login to your DJI account to activate the application. Also you need to use DJI Go app to bind the aircraft to your DJI account. For more details, please check this demo's tutorial.
+    [[DJISDKManager userAccountManager] logIntoDJIUserAccountWithAuthorizationRequired:NO withCompletion:^(DJIUserAccountState state, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Login failed: %@", error.description);
+        }
+    }];
+
 }
 
 - (void)appRegisteredWithError:(NSError *)error
