@@ -8,7 +8,7 @@
 
 #import "DJICameraViewController.h"
 #import <DJISDK/DJISDK.h>
-#import <VideoPreviewer/VideoPreviewer.h>
+#import <DJIWidget/DJIVideoPreviewer.h>
 
 #define WeakRef(__obj) __weak typeof(self) __obj = self
 #define WeakReturn(__obj) if(__obj ==nil)return;
@@ -35,14 +35,14 @@
 {
     [super viewDidAppear:animated];
     
-    [[VideoPreviewer instance] setView:self.fpvPreviewView];
+    [[DJIVideoPreviewer instance] setView:self.fpvPreviewView];
     [self registerApp];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [[VideoPreviewer instance] setView:nil];
+    [[DJIVideoPreviewer instance] setView:nil];
     [[DJISDKManager videoFeeder].primaryVideoFeed removeListener:self];
 }
 
@@ -132,7 +132,7 @@
         [DJISDKManager startConnectionToProduct];
 #endif
         [[DJISDKManager videoFeeder].primaryVideoFeed addListener:self withQueue:nil];
-        [[VideoPreviewer instance] start];
+        [[DJIVideoPreviewer instance] start];
         
     }
     
@@ -141,7 +141,7 @@
 
 #pragma mark - DJIVideoFeedListener
 -(void)videoFeed:(DJIVideoFeed *)videoFeed didUpdateVideoData:(NSData *)videoData {
-    [[VideoPreviewer instance] push:(uint8_t *)videoData.bytes length:(int)videoData.length];
+    [[DJIVideoPreviewer instance] push:(uint8_t *)videoData.bytes length:(int)videoData.length];
 }
 
 #pragma mark - DJICameraDelegate
