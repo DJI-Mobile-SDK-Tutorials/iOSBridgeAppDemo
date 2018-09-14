@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A46985CE2134423B001A1F08 /* DJIWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46985CD21344234001A1F08 /* DJIWidget.framework */; };
-		A46985CF2134423B001A1F08 /* DJIWidget.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46985CD21344234001A1F08 /* DJIWidget.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A46985D321344243001A1F08 /* FFmpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46985D221344242001A1F08 /* FFmpeg.framework */; };
-		A46985D421344243001A1F08 /* FFmpeg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46985D221344242001A1F08 /* FFmpeg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4F47F1C1C086E5C007A0E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F1B1C086E5C007A0E04 /* main.m */; };
 		A4F47F1F1C086E5C007A0E04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F47F1E1C086E5C007A0E04 /* AppDelegate.m */; };
 		A4F47F251C086E5C007A0E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F47F231C086E5C007A0E04 /* Main.storyboard */; };
@@ -20,23 +16,6 @@
 		F93FB4F27B353CBE49C5F7C7 /* libPods-BridgeAppDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCB0D65613A0B536708D254 /* libPods-BridgeAppDemo.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		A46985CC21344234001A1F08 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A46985C821344234001A1F08 /* DJIWidget.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2E54A2CD1F4A904000916B4D;
-			remoteInfo = DJIWidget;
-		};
-		A46985D02134423B001A1F08 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A46985C821344234001A1F08 /* DJIWidget.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2E54A2CC1F4A904000916B4D;
-			remoteInfo = DJIWidget;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		A4F47FC41C087112007A0E04 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -44,8 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A46985CF2134423B001A1F08 /* DJIWidget.framework in Embed Frameworks */,
-				A46985D421344243001A1F08 /* FFmpeg.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,8 +31,6 @@
 
 /* Begin PBXFileReference section */
 		A41255921DCB0CE7002DF91B /* BridgeAppDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BridgeAppDemo.entitlements; sourceTree = "<group>"; };
-		A46985C821344234001A1F08 /* DJIWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DJIWidget.xcodeproj; path = DJIWidget/DJIWidget.xcodeproj; sourceTree = "<group>"; };
-		A46985D221344242001A1F08 /* FFmpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FFmpeg.framework; path = DJIWidget/FFmpeg/FFmpeg.framework; sourceTree = "<group>"; };
 		A4E8222E1C3D0EBC0095BA20 /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avcodec.h; sourceTree = "<group>"; };
 		A4E8222F1C3D0EBC0095BA20 /* avfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfft.h; sourceTree = "<group>"; };
 		A4E822301C3D0EBC0095BA20 /* dv_profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dv_profile.h; sourceTree = "<group>"; };
@@ -187,9 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A46985CE2134423B001A1F08 /* DJIWidget.framework in Frameworks */,
 				F93FB4F27B353CBE49C5F7C7 /* libPods-BridgeAppDemo.a in Frameworks */,
-				A46985D321344243001A1F08 /* FFmpeg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,14 +176,6 @@
 				F259797BAD9DD169134827D3 /* Pods-BridgeAppDemo.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		A46985C921344234001A1F08 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A46985CD21344234001A1F08 /* DJIWidget.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A4E8222B1C3D0EBC0095BA20 /* ffmpeg */ = {
@@ -412,7 +377,6 @@
 		A4F47F0E1C086E5C007A0E04 = {
 			isa = PBXGroup;
 			children = (
-				A46985D221344242001A1F08 /* FFmpeg.framework */,
 				A4F47F191C086E5C007A0E04 /* BridgeAppDemo */,
 				A4F47F3F1C086E6F007A0E04 /* Frameworks */,
 				A4F47F331C086E5C007A0E04 /* BridgeAppDemoTests */,
@@ -467,7 +431,6 @@
 		A4F47F3F1C086E6F007A0E04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A46985C821344234001A1F08 /* DJIWidget.xcodeproj */,
 				DDCB0D65613A0B536708D254 /* libPods-BridgeAppDemo.a */,
 			);
 			name = Frameworks;
@@ -515,7 +478,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A46985D12134423B001A1F08 /* PBXTargetDependency */,
 			);
 			name = BridgeAppDemo;
 			productName = BridgeAppDemo;
@@ -553,28 +515,12 @@
 			mainGroup = A4F47F0E1C086E5C007A0E04;
 			productRefGroup = A4F47F181C086E5C007A0E04 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = A46985C921344234001A1F08 /* Products */;
-					ProjectRef = A46985C821344234001A1F08 /* DJIWidget.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				A4F47F161C086E5C007A0E04 /* BridgeAppDemo */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		A46985CD21344234001A1F08 /* DJIWidget.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DJIWidget.framework;
-			remoteRef = A46985CC21344234001A1F08 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A4F47F151C086E5C007A0E04 /* Resources */ = {
@@ -649,14 +595,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A46985D12134423B001A1F08 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DJIWidget;
-			targetProxy = A46985D02134423B001A1F08 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A4F47F231C086E5C007A0E04 /* Main.storyboard */ = {
@@ -768,10 +706,7 @@
 				CODE_SIGN_ENTITLEMENTS = BridgeAppDemo/BridgeAppDemo.entitlements;
 				DEVELOPMENT_TEAM = 7UL3LRJL93;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DJIWidget/FFmpeg",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -792,10 +727,7 @@
 				CODE_SIGN_ENTITLEMENTS = BridgeAppDemo/BridgeAppDemo.entitlements;
 				DEVELOPMENT_TEAM = 7UL3LRJL93;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DJIWidget/FFmpeg",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
