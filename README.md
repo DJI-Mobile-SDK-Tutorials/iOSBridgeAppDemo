@@ -8,8 +8,8 @@ This iOSBridgeAppDemo is designed for you to gain a better understanding of the 
 
  - iOS 9.0+
  - Xcode 8.0+
- - DJI iOS SDK 4.13.1
- - DJIWidget 1.6.3
+ - DJI iOS SDK 4.14-trial1
+ - DJIWidget 1.6.4
 
 ## SDK Installation with CocoaPods
 
@@ -38,7 +38,7 @@ If you install it successfully, you should get the messages similar to the follo
 ~~~
 Analyzing dependencies
 Downloading dependencies
-Installing DJI-SDK-iOS (4.13.1)
+Installing DJI-SDK-iOS (4.14-trial1)
 Installing DJIWidget (1.6.2)
 Generating Pods project
 Integrating client project
